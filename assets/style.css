@@ -1,0 +1,270 @@
+.tiles_container {
+	list-style: none !important;
+	list-style-type: none !important;
+	position: relative;
+	padding: 0;
+}
+
+.tiles_container li {
+	border-radius: 9px;
+	-webkit-box-shadow: 3px 4px 5px -1px rgba(0,0,0,0.42);
+	-moz-box-shadow: 3px 4px 5px -1px rgba(0,0,0,0.42);
+	box-shadow: 3px 4px 5px -1px rgba(0,0,0,0.42);
+}
+
+.tiles_container li:before {
+	content: "\f016"; 
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	position: absolute;
+	font-size: 35px;
+	color: #FFF;
+	text-align: center;
+	margin-top: 10px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: -16px;
+}
+
+/* IE 10+ specific styles */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+   .tiles_container li:before {
+   	    margin-left: 47% !important;
+   }
+}
+
+.tiles_container li {
+	display: block;
+	position: relative;
+	float: left;
+	width: calc(33% - 10px);
+	height: 100px;
+	margin: 4px;
+	color: #fff !important;
+	/*line-height: 133px;*/
+	text-align: center;
+	text-decoration: none;
+	background: #3f7ab5;
+	font-weight: 700;
+	overflow-y: hidden;
+}
+
+.tiles_container li:nth-child(3n+3) {
+    margin-right: 0 !important;
+    width: 33% !important;
+    margin-right: auto !important;
+}
+
+.tiles_icon:before {
+	color: rgba(173, 216, 230, .8) !important;
+	-webkit-transform: rotate(360deg);
+  	-ms-transform: rotate(360deg);
+  	transform: rotate(360deg);
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.tiles_bg {
+	background-color: rgba(65, 125, 185, .9) !important;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    border-radius: 9px;
+}
+
+.tiles_href:link, .tiles_href:visited {
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	color: #fff !important;
+	line-height: 145px;
+	text-align: center;
+}
+
+.tiles_href:hover, .tiles_href:active {
+	text-decoration: none !important;
+}
+
+.tiles_date {
+	display:inline-block;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width:auto;
+	height:20px;
+	color:#FFFFFF;
+	font: normal 11px arial;
+}
+
+/* 
+// # custom icon definitions - 
+// # used in tiles.js based on current page 
+// # also used for inherit-child class logic
+*/
+.tiles_container_video li:before, .tiles_container_video:before {
+	content: "\f03d" !important;
+}
+.tiles_container_video a:before, ul.tiles_container_video:before {
+	content: none !important;
+}
+
+.tiles_container_creditcard li:before, .tiles_container_creditcard:before {
+	content: "\f09d" !important;
+}
+.tiles_container_creditcard a:before, ul.tiles_container_creditcard:before {
+	content: none !important;
+}
+
+.tiles_container_external li:before, .tiles_container_external:before {
+	content: "\f08e" !important;
+} 
+.tiles_container_external a:before, ul.tiles_container_external:before {
+	content: none !important;
+}
+
+.tiles_container_cart li:before, .tiles_container_cart:before {
+	content: "\f07a" !important;
+}
+.tiles_container_cart a:before, ul.tiles_container_cart:before {
+	content: none !important;
+}
+
+.tiles_container_rebates li:before, .tiles_container_rebates:before {
+	content: "\f0d6" !important;
+}
+.tiles_container_rebates a:before, ul.tiles_container_rebates:before {
+	content: none !important;
+}
+
+.tiles_container_health li:before, .tiles_container_health:before  {
+	content: "\f21e" !important;
+}
+.tiles_container_health a:before, ul.tiles_container_health:before {
+	content: none !important;
+}
+
+.tiles_container_tickets li:before, .tiles_container_tickets:before {
+	content: "\f145" !important;
+}
+.tiles_container_tickets a:before, ul.tiles_container_tickets:before {
+	content: none !important;
+}
+
+.tiles_container_bedding li:before, .tiles_container_bedding:before {
+	content: "\f236" !important;
+}
+.tiles_container_bedding a:before, ul.tiles_container_bedding:before {
+	content: none !important;
+}
+
+.tiles_container_tags li:before, .tiles_container_tags:before {
+	content: "\f02b" !important;
+}
+.tiles_container_tags a:before, ul.tiles_container_tags:before {
+	content: none !important;
+}
+
+.tiles_container_planograms li:before, .tiles_container_planograms:before {
+	content: "\f248" !important;
+}
+.tiles_container_planograms a:before, ul.tiles_container_planograms:before {
+	content: none !important;
+}
+
+.tiles_container_disability li:before, .tiles_container_disability:before {
+	content: "\f193" !important;
+}
+.tiles_container_disability a:before, ul.tiles_container_disability:before {
+	content: none !important;
+}
+
+.tiles_container_cooking li:before, .tiles_container_cooking:before {
+	content: "\f0f5" !important;
+}
+.tiles_container_cooking a:before, ul.tiles_container_cooking:before {
+	content: none !important;
+}
+.tiles_container_security li:before, .tiles_container_security:before {
+	content: "\f023" !important;
+}
+.tiles_container_security a:before, ul.tiles_container_security:before {
+	content: none !important;
+}
+/* // END custom icon definitions */
+
+@media screen and (min-width: 1px) and (max-width: 380px) {
+	.tiles_container li:before {
+		font-size: 25px !important;
+		margin-top: 25px;
+    	margin-right: 0;
+    	margin-bottom: 0;
+    	margin-left: 47%;
+		display:block;
+	}
+	.tiles_container li, .tiles_container li:nth-child(3n+3) {
+		width: 95% !important;
+	}
+}
+
+@media screen and (min-width: 381px) and (max-width: 640px) {
+
+	.tiles_container li:before {
+		font-size: 25px !important;
+		margin-top: 25px;
+    	margin-right: 0;
+    	margin-bottom: 0;
+    	margin-left: 47%;
+		display:block;
+		
+	}
+	.tiles_container li, .tiles_container li:nth-child(3n+3) {
+		width: 95% !important;
+	}
+
+}
+
+@media screen and (min-width: 641px) and (max-width: 768px) {
+
+	.tiles_container li:before {
+		font-size: 25px !important;
+		margin-top: 25px;
+    	margin-right: 0;
+    	margin-bottom: 0;
+    	margin-left: 47%;
+		display:block;
+		
+	}
+
+	.tiles_container li, .tiles_container li {
+		width: 48% !important;
+	}
+
+	.tiles_container li, .tiles_container li:nth-child(2n+2) {
+		width: 48%;
+		width: calc(48% - 10px);
+		margin-right: auto !important;
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+	.tiles_container li:before {
+		font-size: 25px !important;
+		margin-top: 25px;
+    	margin-right: 0;
+    	margin-bottom: 0;
+    	margin-left: 47%;
+		display:block;
+		
+	}
+	.tiles_container li, .tiles_container li:nth-child(3n+3) {
+		width: 33%;
+		width: calc(33% - 10px);
+		margin-right: auto !important;
+	}
+
+}
